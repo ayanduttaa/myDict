@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <title>myDict</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+</head>
+<body>
+  <div class="searchBarHolder">
+    <div class="searchBarDiv">
+        <input class="searchInput" id="searchWord" type="text" placeholder="Enter to search"><span class="searchButton material-symbols-outlined" onclick="searchWord()">search</span>
+    </div>
+  </div>
+
+  <div class="answerHolder">
+    <div class="answerDiv">
+        <div class="answerTopPart">
+            <div class="answerTopPartChild"><span class="searchKey" id="output1"></span></div>
+            <div class="answerTopPartChild"><span class="searchKey" id="output2"></span></div>
+            <div class="answerTopPartChild hearSearchWord"><span class=" material-symbols-outlined" id="playButton">hearing</span><audio id="audioPlayer" src="" preload="none" display="none"></audio></div>
+        </div>
+
+        <div class="answerBottomPart">
+            <div class="answerBottomPartChild">
+                <div class="answerBottomPartChildTextHolder">
+                    <span class="answerBottomPartChildText" id="wordPartsOfSpeech"></span><br><hr class="hrOff" id="hrID1"><br><br>
+                    <span class="answerBottomPartChildText" id="wordDefinitionHeading"></span><br>
+                    <span class="answerBottomPartChildText" id="wordDefinition"></span><br><br><hr class="hrOff" id="hrID2"><br><br>
+                    <span class="answerBottomPartChildText" id="wordSynonym"></span><br><br>
+                    <span class="answerBottomPartChildText" id="wordAntonym"></span>
+                </div>
+
+                <!-- <div class="sourceHolderDiv">
+                    <span class="material-symbols-outlined sourceButton" id="srcBtn">
+                       lightbulb
+                    </span>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+<div height:100px>
+    <div height:20px></div>
+    <div height:20px></div>
+</div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
