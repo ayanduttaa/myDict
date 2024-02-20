@@ -28,15 +28,24 @@ function searchWord() {
           //Searched Word
           let word = data[0].word;
           document.getElementById("output1").textContent = word;
+
           
           //Phonetic
           let phonetic = data[0].phonetic;
           document.getElementById("output2").textContent = phonetic;
           
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
           //Voice
           const playButton = document.getElementById("playButton");
           const audioPlayer = document.getElementById("audioPlayer");
+
           if (data[0].phonetics[0].audio) { // Check if audio source exists
+            playButton.style.display = "flex";
+            playButton.style.backgroundColor = "#e3e3e3";
+
             playButton.textContent = "volume_up";
             playButton.style.opacity = 1;
             playButton.addEventListener("click", () => {
@@ -45,9 +54,14 @@ function searchWord() {
             });
           } else {
             audioPlayer.src = "abc";
-            playButton.style.opacity = 0.3;
-            playButton.textContent = "volume_off";
+            playButton.style.display = "none";
           }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
           //partsOfSpeech
           let partOfSpeech = data[0].meanings[0].partOfSpeech;
@@ -91,23 +105,19 @@ function searchWord() {
             document.getElementById("wordAntonym").textContent = "No antonyms found.";
           }
 
+          let haha = data[0].sourceUrls;
+          console.log(haha);
+
 
           //Source Button
-        //   if (data[0].souceUrls) {
-        //     // playButton.textContent = "volume_up";
-        //     // playButton.style.opacity = 1;
-        //     srcBtn.addEventListener("click", () => {
-        //         let srcLink = data[0].souceUrls;
-        //         const srcBtn = document.getElementById("srcBtn");
-        //         srcBtn.src = srcLink;
-        //     });
-        //   } else {
-            
-        //     srcBtn.style.opacity = 0.1;
-            
-        //   }
-
-
+          if (data[0].sourceUrls) {
+            srcBtn.addEventListener("click", () => {
+            let srcLink = data[0].sourceUrls;
+            window.open(srcLink, '_blank');
+            });
+          } else {
+            srcBtn.style.opacity = 0.3;
+          }
         }
       })
       .catch(error => {
