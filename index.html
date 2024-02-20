@@ -3,13 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style.css">
   <title>myDict</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   
 </head>
 <body>
   <div class="searchBarHolder">
+
+    <div>
+      <span class="material-symbols-outlined dictLogo">
+          dictionary
+      </span>
+    </div>
+
     <div class="searchBarDiv">
         <input class="searchInput" id="searchWord" type="text" placeholder="Enter to search"><span class="searchButton material-symbols-outlined" onclick="searchWord()">search</span>
     </div>
@@ -20,7 +27,7 @@
         <div class="answerTopPart">
             <div class="answerTopPartChild"><span class="searchKey" id="output1"></span></div>
             <div class="answerTopPartChild"><span class="searchKey" id="output2"></span></div>
-            <div class="answerTopPartChild hearSearchWord"><span class=" material-symbols-outlined" id="playButton">hearing</span><audio id="audioPlayer" src="" preload="none" display="none"></audio></div>
+            <div class="answerTopPartChild hearSearchWord" id="hearSearchWordID"><span class=" material-symbols-outlined" id="playButton">hearing</span><audio id="audioPlayer" src="" preload="none"></audio></div>
         </div>
 
         <div class="answerBottomPart">
@@ -33,22 +40,21 @@
                     <span class="answerBottomPartChildText" id="wordAntonym"></span>
                 </div>
 
-                <!-- <div class="sourceHolderDiv">
+                <div class="sourceHolderDiv">
                     <span class="material-symbols-outlined sourceButton" id="srcBtn">
                        lightbulb
                     </span>
-                </div> -->
+                </div>
 
             </div>
         </div>
     </div>
   </div>
 
-<div height:100px>
-    <div height:20px></div>
-    <div height:20px></div>
-</div>
+ 
+    <span class="creditCodeayan">Made with ❤️ by <a class="creditCodeayanLink" href="https://www.youtube.com/@codeayan" target="_blank">@codeayan</a></span>
+  
 
-  <script src="script2.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
